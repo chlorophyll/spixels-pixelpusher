@@ -1,6 +1,6 @@
 [submodule "pp-server"]
 	path = pp-server
-	url = https://github.com/hzeller/pixelpusher-server
+	url = https://github.com/chlorophyll/pixelpusher-server
 [submodule "spixels"]
 	path = spixels
-	url = https://github.com/hzeller/spixels
+	url = https://github.com/chlorophyll/spixels
