@@ -14,7 +14,7 @@ PP_LIBRARY=$(PP_LIBDIR)/lib$(PP_LIBRARY_NAME).a
 
 LDFLAGS+=-L$(PP_LIBDIR) -l$(PP_LIBRARY_NAME) \
          -L$(SPIXELS_LIBDIR) -l$(SPIXELS_LIBRARY_NAME) \
-          -lrt -lm -lpthread
+          -lrt -lm -lpthread -L/opt/vc/lib -lbcm_host
 
 all : spixels-pixel-push
 
