@@ -76,7 +76,7 @@ private:
 static int usage(const char *progname) {
   fprintf(stderr, "usage: %s <options>\n", progname);
   fprintf(stderr, "Options:\n"
-          "\t-T <type>     : One of APA102, LDP6803, WS2801; default: APA102\n"
+          "\t-T <type>     : One of APA102, LPD6803, LPD8806, WS2801; default: APA102\n"
           "\t-c <clockspeed>: SPI clock-speed in Mhz [1..15]. Default: 4\n"
           "\t-S <strips>   : Number of connected LED strips (default: 16)\n"
           "\t-L <len>      : Length of LED strips (default: 144)\n"
@@ -95,7 +95,8 @@ static int usage(const char *progname) {
 static StripFactory parseType(const char *type) {
   if (strcasecmp(type, "APA102") == 0) return &spixels::CreateAPA102Strip;
   if (strcasecmp(type, "WS2801") == 0) return &spixels::CreateWS2801Strip;
-  if (strcasecmp(type, "LDP6803") == 0) return &spixels::CreateLPD6803Strip;
+  if (strcasecmp(type, "LPD6803") == 0) return &spixels::CreateLPD6803Strip;
+  if (strcasecmp(type, "LPD8806") == 0) return &spixels::CreateLPD8806Strip;
   return NULL;
 }
 
